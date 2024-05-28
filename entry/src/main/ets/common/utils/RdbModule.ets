@@ -47,13 +47,13 @@ class RdbModule {
   }
 
   // 插入一条数据到数据库
-  async insert<T extends ValuesBucket>(value: T) {
+  async setData<T extends ValuesBucket>(value: T) {
     const store = await this.getStoreInstance();
     return store.insert(this.tableName, value);
   }
 
   // 查询数据库中的数据量
-  async queryCount() {
+  async getTotal() {
     const store = await this.getStoreInstance();
     const predicates = new relationalStore.RdbPredicates(this.tableName);
     const results = await store.query(predicates);
@@ -61,7 +61,7 @@ class RdbModule {
   }
 
   // 查询数据库列表，可以指定单个或多个ID，返回一个数组
-  async queryTheList<T>(id?: number | number[]) {
+  async getTheList<T>(id?: number | number[]) {
     const store = await this.getStoreInstance();
     const predicates = new relationalStore.RdbPredicates(this.tableName);
     if (typeof id === 'number') {
@@ -78,7 +78,7 @@ class RdbModule {
   }
 
   // 更新数据库中的数据
-  async update<T extends ValuesBucket>(id: number, val: T) {
+  async upData<T extends ValuesBucket>(id: number, val: T) {
     const store = await this.getStoreInstance();
     const predicates = new relationalStore.RdbPredicates(this.tableName);
     predicates.equalTo("id", id);
@@ -86,7 +86,7 @@ class RdbModule {
   }
 
   // 删除数据库中的数据
-  async deleteData(id: number) {
+  async delData(id: number) {
     const store = await this.getStoreInstance();
     const predicates = new relationalStore.RdbPredicates(this.tableName);
     predicates.equalTo("id", id);
