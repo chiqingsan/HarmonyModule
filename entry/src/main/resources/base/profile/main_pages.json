@@ -1,0 +1,10 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/FileUpload",
+    "pages/LifeCycle",
+    "pages/RowList",
+    "pages/CircularList",
+    "pages/RdbStorePage"
+  ]
+}
