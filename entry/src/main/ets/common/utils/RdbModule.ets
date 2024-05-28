@@ -1,8 +1,9 @@
 import { relationalStore, ValuesBucket } from '@kit.ArkData'
 
+// 数据库名和表名
 const tableName = 'privacy_note'
 // 创建数据库的语句
-const sqlCreate = `CREATE TABLE IF NOT EXISTS ${tableName} (
+const sqlCreate = `CREATE TABLE IF NOT EXISTS qwe (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         title TEXT NOT NULL,
         content TEXT NOT NULL,
@@ -26,6 +27,7 @@ class RdbModule {
       this.securityLevel = securityLevel;
     } else {
       // 如果表名和建表语句内的表名不匹配,则抛出错误
+      console.error("The table name does not match the statement that created the table")
       throw new Error("The table name does not match the statement that created the table");
     }
   }
@@ -94,4 +96,4 @@ class RdbModule {
 
 // 创建RdbModule实例，并传入表名、创建语句和安全等级
 // 如果需要多个数据库，可以导出多个实例
-export const rdbModule_A = new RdbModule(tableName, sqlCreate, relationalStore.SecurityLevel.S1);
+export const rdbModule = new RdbModule(tableName, sqlCreate, relationalStore.SecurityLevel.S1);
