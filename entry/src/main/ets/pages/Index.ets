@@ -12,7 +12,8 @@ struct Index {
   @State text: string = "Index 页面跳转目录"
   myPage: pageJump[] = [
     { title: "图片上传", path: "/pages/FileUpload".slice(1) },
-    { title: "关系型数据库", path: "/pages/RdbStorePage".slice(1) }
+    { title: "关系型数据库", path: "/pages/RdbStorePage".slice(1) },
+    { title: "卡片", path: "/pages/CircularList".slice(1) }
   ]
 
   build() {

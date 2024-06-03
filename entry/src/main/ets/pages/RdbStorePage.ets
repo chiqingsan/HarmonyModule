@@ -54,64 +54,7 @@ struct RdbStorePage {
   }
 
   build() {
-    Column({ space: 12 }) {
-      TextInput()
-        .margin(20)
-        .onChange((val) => {
-          this.val = val
-        })
-      Button("创建数据库")
-        .onClick(async () => {
-          rdbModule.getStoreInstance()
-        })
-      Button("删除数据库")
-        .onClick(() => {
-          relationalStore.deleteRdbStore(getContext(), "chiqingsan.db")
-        })
-        .backgroundColor(Color.Red)
-        .enabled(false)
 
-      Button("插入数据库文件")
-        .onClick(async () => {
-          const res = await rdbModule.insert<NoteItem>({
-            id: null,
-            title: `今天天气好_${this.val}`,
-            content: '想吃肯德基',
-            date_added: Date.now()
-          })
-
-          AlertDialog.show({ message: `添加成功,id:${res}` })
-
-        })
-      Button("删除数据库数据")
-        .onClick(async () => {
-
-          const delNum = rdbModule.deleteData(1)
-          AlertDialog.show({ message: `一共删除了${delNum}行数据` })
-        })
-        .backgroundColor(Color.Red)
-      Button("更新数据库数据")
-        .onClick(async () => {
-
-          const modifyNum = await rdbModule.update(1, {
-            title: "改了标题"
-          } as NoteItem)
-          AlertDialog.show({ message: `一共修改了${modifyNum}行数据` })
-
-        })
-      Button("查询数据库数据字段")
-        .onClick(async () => {
-          const store = await this.createADatabase()
-          const predicate = new relationalStore.RdbPredicates(this.tableName)
-          const res = await store?.query(predicate)
-          AlertDialog.show({ message: `当前表的字段数:${res.columnNames},当前表一共有${res.rowCount}条数据` })
-        })
-      Button("查询数据库数据")
-        .onClick(async () => {
-          const list = await rdbModule.queryTheList<NoteItem>()
-          AlertDialog.show({ message: JSON.stringify(list, null, 2) })
-        })
-    }.height("100%").width("100%").justifyContent(FlexAlign.Center)
   }
 }
 
