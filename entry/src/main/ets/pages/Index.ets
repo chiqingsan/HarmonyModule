@@ -13,7 +13,9 @@ struct Index {
   myPage: pageJump[] = [
     { title: "图片上传", path: "/pages/FileUpload".slice(1) },
     { title: "关系型数据库", path: "/pages/RdbStorePage".slice(1) },
-    { title: "卡片", path: "/pages/CircularList".slice(1) }
+    { title: "卡片", path: "/pages/CircularList".slice(1) },
+    { title: "DemoPage", path: "/pages/DemoPage".slice(1) },
+    { title: "充电动画", path: "/pages/ChargingEffect".slice(1) },
   ]
 
   build() {

@@ -5,6 +5,8 @@
     "pages/LifeCycle",
     "pages/RowList",
     "pages/CircularList",
-    "pages/RdbStorePage"
+    "pages/RdbStorePage",
+    "pages/DemoPage",
+    "pages/ChargingEffect"
   ]
 }

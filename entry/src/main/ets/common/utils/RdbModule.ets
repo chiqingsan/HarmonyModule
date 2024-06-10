@@ -1,9 +1,9 @@
 import { relationalStore, ValuesBucket } from '@kit.ArkData'
 
 // 数据库名和表名
-const tableName = 'privacy_note'
+const tableName = 'chiqingsan'
 // 创建数据库的语句
-const sqlCreate = `CREATE TABLE IF NOT EXISTS qwe (
+const sqlCreate = `CREATE TABLE IF NOT EXISTS ${tableName} (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         title TEXT NOT NULL,
         content TEXT NOT NULL,
@@ -12,6 +12,7 @@ const sqlCreate = `CREATE TABLE IF NOT EXISTS qwe (
 
 
 // RdbModule类用于封装对关系型数据库的操作
+/*传入表名,建表语句,和安全级别来实例化一个关系型数据库*/
 class RdbModule {
   // 操作数据库的实例
   private store: relationalStore.RdbStore | null = null;
