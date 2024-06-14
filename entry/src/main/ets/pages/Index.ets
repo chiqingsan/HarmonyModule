@@ -16,6 +16,8 @@ struct Index {
     { title: "卡片", path: "/pages/CircularList".slice(1) },
     { title: "DemoPage", path: "/pages/DemoPage".slice(1) },
     { title: "充电动画", path: "/pages/ChargingEffect".slice(1) },
+    { title: "Web混合开发", path: "/pages/HybridWeb".slice(1) },
+    { title: "Web混合调用", path: "/pages/HybridCalls".slice(1) },
   ]
 
   build() {

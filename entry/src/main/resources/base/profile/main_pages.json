@@ -3,10 +3,11 @@
     "pages/Index",
     "pages/FileUpload",
     "pages/LifeCycle",
-    "pages/RowList",
     "pages/CircularList",
     "pages/RdbStorePage",
     "pages/DemoPage",
-    "pages/ChargingEffect"
+    "pages/ChargingEffect",
+    "pages/HybridWeb",
+    "pages/HybridCalls"
   ]
 }
