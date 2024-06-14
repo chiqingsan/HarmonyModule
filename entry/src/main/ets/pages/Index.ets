@@ -18,6 +18,7 @@ struct Index {
     { title: "充电动画", path: "/pages/ChargingEffect".slice(1) },
     { title: "Web混合开发", path: "/pages/HybridWeb".slice(1) },
     { title: "Web混合调用", path: "/pages/HybridCalls".slice(1) },
+    { title: "workers案例", path: "/pages/workers".slice(1) },
   ]
 
   build() {

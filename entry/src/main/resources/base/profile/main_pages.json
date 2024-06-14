@@ -8,6 +8,7 @@
     "pages/DemoPage",
     "pages/ChargingEffect",
     "pages/HybridWeb",
-    "pages/HybridCalls"
+    "pages/HybridCalls",
+    "pages/workers"
   ]
 }
