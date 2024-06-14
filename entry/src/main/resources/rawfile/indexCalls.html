@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column; /* 更改为垂直排列 */
+            justify-content: center; /* 垂直居中 */
+            align-items: center; /* 水平居中 */
+            height: 70vh; /* 使用视口高度 */
+        }
+        button {
+            margin-top: 10px; /* 在按钮上方添加一些空间 */
+            padding: 10px 20px; /* 按钮内边距 */
+            font-size: 16px; /* 按钮字体大小 */
+            color: #fff; /* 按钮字体颜色 */
+            background-color: #007bff; /* 按钮背景颜色 */
+            border: none; /* 无边框 */
+            border-radius: 10px; /* 圆角边框 */
+            cursor: pointer; /* 鼠标悬停时显示指针 */
+            outline: none; /* 移除点击时的轮廓线 */
+        }
+        img{
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3; /* 鼠标悬停时的背景颜色 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <button onclick="openAlbum()">Web端打开相册</button>
+    <img id="myimg" src="file:///media/Photo/5/IMG_1717813347_003/screenshot_20240608_102047.jpg"
+         style="width:200px;height:200px;">
+</div>
+
+</body>
+
+<script>
+    // 打开相册
+    async function openAlbum(){
+        if (window.Calls) {
+            const res = await window.Calls.openAlbum()
+            document.querySelector("#myimg").src = res.photoUris[0]
+            // window.Calls.alert(res.photoUris[0])
+        }
+
+    }
+
+    function setImage(src){
+        document.querySelector("#myimg").src = src
+        window.Calls.alert(document.querySelector("#myimg").src)
+    }
+</script>
+</html>
