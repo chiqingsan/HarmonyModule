@@ -1,7 +1,4 @@
 import { webview } from '@kit.ArkWeb'
-import { promptAction, router } from '@kit.ArkUI'
-import json from '@ohos.util.json'
-import { JSON } from '@kit.ArkTS'
 
 interface eventMessages {
   type: string
@@ -16,10 +13,11 @@ struct HybridWeb {
   currentPorts: webview.WebMessagePort[] = []
 
   sendMessage() {
-    this.currentPorts[0].postMessageEvent(JSON.stringify({
+    const message: eventMessages = {
       type: "change",
       message: `Ark ${Date.now()}`
-    } as eventMessages))
+    }
+    this.currentPorts[0].postMessageEvent(JSON.stringify(message))
   }
 
   // 创建端口

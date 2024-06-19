@@ -9,6 +9,9 @@
     "pages/ChargingEffect",
     "pages/HybridWeb",
     "pages/HybridCalls",
-    "pages/workers"
+    "pages/workers",
+    "pages/taskPool",
+    "pages/FontGradients",
+    "pages/Multilingual"
   ]
 }

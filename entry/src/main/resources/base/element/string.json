@@ -11,6 +11,10 @@
     {
       "name": "EntryAbility_label",
       "value": "持青伞"
+    },
+    {
+      "name": "test_text",
+      "value": "中文环境"
     }
   ]
 }

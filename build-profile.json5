@@ -1,6 +1,20 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\chiqingsan\\.ohos\\config\\default_HarmonyModule_vzjIzRWkijR10EPRE0TaJqewc30Jws49Mx-QfQEQsww=.cer",
+          "storePassword": "0000001BB28379246EC39820301FEA9A4A81D9C6218D33045AD55FE1DA606C3F874DA1E9DC554DD9811169",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BFB11F5C911E8088CF7479B9ADC8C9DE16B1A8FAD4F385616A731DAD707ACFFCB45B414B97546FF",
+          "profile": "C:\\Users\\chiqingsan\\.ohos\\config\\default_HarmonyModule_vzjIzRWkijR10EPRE0TaJqewc30Jws49Mx-QfQEQsww=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\chiqingsan\\.ohos\\config\\default_HarmonyModule_vzjIzRWkijR10EPRE0TaJqewc30Jws49Mx-QfQEQsww=.p12"
+        }
+      }
+    ],
     "products": [
       {
         "name": "default",

@@ -19,6 +19,9 @@ struct Index {
     { title: "Web混合开发", path: "/pages/HybridWeb".slice(1) },
     { title: "Web混合调用", path: "/pages/HybridCalls".slice(1) },
     { title: "workers案例", path: "/pages/workers".slice(1) },
+    { title: "TaskPool案例", path: "/pages/taskPool".slice(1) },
+    { title: "文字渐变", path: "/pages/FontGradients".slice(1) },
+    { title: "设备偏好语言切换", path: "/pages/Multilingual".slice(1) },
   ]
 
   build() {

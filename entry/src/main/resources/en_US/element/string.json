@@ -11,6 +11,10 @@
     {
       "name": "EntryAbility_label",
       "value": "chiqingsan"
+    },
+    {
+      "name": "test_text",
+      "value": "English environment"
     }
   ]
 }
