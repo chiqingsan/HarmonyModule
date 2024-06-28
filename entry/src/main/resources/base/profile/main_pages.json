@@ -12,6 +12,7 @@
     "pages/workers",
     "pages/taskPool",
     "pages/FontGradients",
-    "pages/Multilingual"
+    "pages/Multilingual",
+    "pages/EditTestPage"
   ]
 }
