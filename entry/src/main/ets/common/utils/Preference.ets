@@ -1,6 +1,5 @@
 import { preferences } from '@kit.ArkData'
 
-// import preferences from '@ohos.data.preferences'
 
 class PreferencesManager {
   // 需要保存到磁盘的文件名称

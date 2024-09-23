@@ -13,6 +13,7 @@
     "pages/taskPool",
     "pages/FontGradients",
     "pages/Multilingual",
-    "pages/EditTestPage"
+    "pages/EditTestPage",
+    "pages/PixelMapTestPage"
   ]
 }

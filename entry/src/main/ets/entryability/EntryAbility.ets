@@ -63,7 +63,7 @@ export default class EntryAbility extends UIAbility {
     /*
      * 使用windowStage.loadContent来设置UI加载的第一个页面
      * */
-    windowStage.loadContent('pages/Index', (err) => {
+    windowStage.loadContent('/pages/PixelMapTestPage'.slice(1), (err) => {
       if (err.code) {
         hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
         return;
